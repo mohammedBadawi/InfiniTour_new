@@ -60,12 +60,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:isIndicator="true"
-            android:max="5"
             android:numStars="5"
+            android:max="5"
             android:scaleX=".5"
             android:scaleY=".5"
             android:transformPivotX="0dp"
-            android:transformPivotY="0dp"></RatingBar>
+            android:transformPivotY="0dp"
+            android:id="@+id/guide_rate">
+
+        </RatingBar>
 
     </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,10 +53,12 @@ public class TourGuide_Adapter extends ArrayAdapter<TourGudie> {
             TextView name = view.findViewById(R.id.tv_tourguide_name);
             TextView age = view.findViewById(R.id.tv_tourguide_age);
             TextView lang = view.findViewById(R.id.tv_tourguide_language);
+            RatingBar rate=(RatingBar)view.findViewById(R.id.guide_rate);
 
             name.setText(item.get(position).getName());
             age.setText(item.get(position).getAge() + " Years");
             lang.setText(item.get(position).getLanguage());
+            rate.setRating(Float.parseFloat(item.get(position).getRate()));
             /* if(language.size()==0)
              lang.setText(" ");
              else lang.setText(language.get(0));*/

@@ -87,7 +87,7 @@ public class Choose_TourGuide extends AppCompatActivity {
                     String name= (String) postSnapshot.child("name").getValue();
                     String age= (String) postSnapshot.child("age").getValue();
                     String email= (String) postSnapshot.child("email").getValue();
-                    String rate= (String) postSnapshot.child("rate").getValue();
+                    String rate=(String) postSnapshot.child("rate").getValue();
                     String photo_url= (String) postSnapshot.child("photo_url").getValue();
                     String guide_lang=(String) postSnapshot.child("language").getValue();
                     TourGudie t =new TourGudie(age,email,name,photo_url,rate,guide_lang);

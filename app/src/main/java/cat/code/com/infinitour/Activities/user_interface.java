@@ -62,7 +62,7 @@ public class user_interface extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(user_interface.this, edittext.getText(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(user_interface.this, edittext.getText(), Toast.LENGTH_SHORT).show();
                 mdatabase = FirebaseDatabase.getInstance().getReference().child("Countries").child(edittext.getText().toString()).child("Cities");
                 mdatabase.addValueEventListener(new ValueEventListener() {
                     @Override
@@ -129,7 +129,7 @@ public class user_interface extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                    langs_test.add(postSnapshot.getValue().toString());
-                   Toast.makeText(user_interface.this,langs_test.get(0),Toast.LENGTH_LONG).show();
+                  // Toast.makeText(user_interface.this,langs_test.get(0),Toast.LENGTH_LONG).show();
                 }
             }
 
